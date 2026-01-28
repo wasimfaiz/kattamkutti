@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 8%;
+    --foreground: 180 100% 95%;
+
+    --card: 230 30% 12%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 230 30% 12%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 230 25% 8%;
+
+    --secondary: 320 100% 60%;
+    --secondary-foreground: 230 25% 8%;
+
+    --muted: 230 20% 18%;
+    --muted-foreground: 220 15% 60%;
+
+    --accent: 280 100% 65%;
+    --accent-foreground: 230 25% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 30% 20%;
+    --input: 230 30% 15%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom game colors */
+    --neon-cyan: 180 100% 50%;
+    --neon-pink: 320 100% 60%;
+    --neon-purple: 280 100% 65%;
+    --neon-yellow: 50 100% 55%;
+    
+    /* Glow effects */
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5), 0 0 40px hsl(180 100% 50% / 0.3);
+    --glow-pink: 0 0 20px hsl(320 100% 60% / 0.5), 0 0 40px hsl(320 100% 60% / 0.3);
+    --glow-purple: 0 0 20px hsl(280 100% 65% / 0.5), 0 0 40px hsl(280 100% 65% / 0.3);
+
+    --sidebar-background: 230 25% 8%;
+    --sidebar-foreground: 180 100% 95%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 230 25% 8%;
+    --sidebar-accent: 230 30% 15%;
+    --sidebar-accent-foreground: 180 100% 95%;
+    --sidebar-border: 230 30% 20%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: var(--glow-cyan);
+  }
+  
+  .text-glow-pink {
+    text-shadow: var(--glow-pink);
+  }
+  
+  .box-glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+  
+  .box-glow-pink {
+    box-shadow: var(--glow-pink);
+  }
+
+  .font-display {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
